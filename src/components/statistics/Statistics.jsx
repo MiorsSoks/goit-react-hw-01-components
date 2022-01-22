@@ -5,9 +5,9 @@ export default function Statistics({title, stats}) {
 return  <Statistic>
         {title && <Title>{title}</Title>}
 
-        <StatisticList> {stats.map((stat) => (<StatisticListItem key={stat.id}>
-                <Label>{stat.label}</Label>
-                <Percentage>{stat.percentage}%</Percentage>
+    <StatisticList> {stats.map(({ id, label, percentage }) => (<StatisticListItem key={id}>
+                <Label>{label}</Label>
+                <Percentage>{percentage}%</Percentage>
             </StatisticListItem>))}
         </StatisticList>
         </Statistic>

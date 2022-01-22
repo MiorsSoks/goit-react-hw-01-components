@@ -1,11 +1,11 @@
-import User from './components/user/User'
-import Statistics from './components/statistics/Statistics'
-import FriendList from './components/friendList/FriendList'
+import User from './components/User/User'
+import Statistics from './components/Statistics/Statistics'
+import FriendList from './components/FriendList/FriendList'
 import TransactionHistory from './components/TransactionHistory/TransactionHistory'
-import userList from './user.json'
-import dataList from './data.json'
-import friends from './friends.json'
-import transactions from './transactions.json'
+import userList from './data/user.json'
+import dataList from './data//data.json'
+import friends from './data//friends.json'
+import transactions from './data//transactions.json'
 
 export default function App() {
     return  <div>
@@ -14,9 +14,7 @@ export default function App() {
   name={userList.username}
   tag={userList.tag}
   location={userList.location}
-  followers={userList.stats.followers}
-  likes={userList.stats.likes}
-  views={userList.stats.views}
+  stats={userList.stats}
 
         />
         <Statistics

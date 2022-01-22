@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {UserCard, Profile, Description, Avatar, Name, TagAndLocation, Stats, StatItems, Label, Quantity} from './User.styled'
 
-export default function User({ avatar, name, tag, location, followers, views, likes}) {
+export default function User({ avatar, name, tag, location, stats }) {
   return <UserCard>
     <Profile>
       <Description>
@@ -17,15 +17,15 @@ export default function User({ avatar, name, tag, location, followers, views, li
       <Stats>
         <StatItems>
           <Label>Followers</Label>
-          <Quantity>{followers}</Quantity>
+          <Quantity>{stats.followers}</Quantity>
         </StatItems>
         <StatItems>
           <Label>Views</Label>
-          <Quantity>{views}</Quantity>
+          <Quantity>{stats.views}</Quantity>
         </StatItems>
         <StatItems>
           <Label>Likes</Label>
-          <Quantity>{likes}</Quantity>
+          <Quantity>{stats.likes}</Quantity>
         </StatItems>
       </Stats>
     </Profile>
